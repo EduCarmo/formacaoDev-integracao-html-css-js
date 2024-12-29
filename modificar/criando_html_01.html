@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modificar Elementos</title>
+    <link rel="stylesheet" href="../css/estilo.css">
+    <link rel="stylesheet" href="../css/menu.css">
+</head>
+
+<body id="exercicio">
+
+    <script>
+        const body = document.querySelector('body')
+
+        const div1 = document.createElement('div')
+        div1.innerHTML = 'Primeiro'
+        div1.classList.add('destaque')
+
+        const div2  = document.createElement('div')
+        div2.innerHTML = 'Segundo'
+        div2.setAttribute('e.dev-atributo', 'valor')
+
+        const p = document.createElement('p')
+        p.innerHTML = 'Terceiro'
+        
+        const div3 = document.createElement('div')
+        div3.appendChild(p)
+
+        body.appendChild(div1)
+        body.appendChild(div2)
+        body.appendChild(div3)
+
+        const texto = document.createTextNode('Antes...')
+        div3.insertBefore(texto, p)
+
+        console.log(body)
+    </script>
+</body>
+
+</html>
