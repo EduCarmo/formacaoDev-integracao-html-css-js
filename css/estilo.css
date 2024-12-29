@@ -14,7 +14,7 @@ body {
 }
 
 
-#exercicio > div{
+#exercicio>div {
     display: inline-block;
     padding: 20px 40px;
     margin: 5px;
@@ -22,14 +22,60 @@ body {
     font-size: 1.5rem;
 }
 
-#exercicio > div:nth-child(1) {background-color: #d2001a;}
-#exercicio > div:nth-child(2) {background-color: #25316d;}
-#exercicio > div:nth-child(3) {background-color: #d800a6;}
-#exercicio > div:nth-child(4) {background-color: #319da0;}
-#exercicio > div:nth-child(5) {background-color: #f800a6;}
+#exercicio>div:nth-child(1) {
+    background-color: #d2001a;
+}
 
-#exercicio > div.destaque {
+#exercicio>div:nth-child(2) {
+    background-color: #25316d;
+}
+
+#exercicio>div:nth-child(3) {
+    background-color: #d800a6;
+}
+
+#exercicio>div:nth-child(4) {
+    background-color: #319da0;
+}
+
+#exercicio>div:nth-child(5) {
+    background-color: #f800a6;
+}
+
+#exercicio .destaque {
     color: #f6cc42;
     border: 8px solid #f6cc42;
     font-weight: 900;
+}
+
+#exercicio .coluna {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input,
+select {
+    font-size: 1.7rem;
+    color: white;
+    background-color: #444;
+    padding: 10px;
+    outline: none;
+    border-radius: 5px;
+    border: none;
+}
+
+input:focus,
+select:focus {
+    background-color: #555;
+}
+
+button {
+    font-size: 1.4rem;
+    color: white;
+    background-color: #149e0f;
+    border-radius: 5px;
+    padding: 10px 25px;
+    border: none;
+    cursor: pointer;
 }

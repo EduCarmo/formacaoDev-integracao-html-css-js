@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elementos por ID</title>
+    <link rel="stylesheet" href="../css/estilo.css">
+    <link rel="stylesheet" href="../css/menu.css">
+    <script defer src="../js/elemento_por_id_02.js"></script>
+</head>
+
+<body id="exercicio">
+    <main class="coluna">
+        <p class="destaque">Paragrafo #01</p>
+
+        <article>
+            <p>Paragrafo #02</p>
+        </article>
+        <p>Paragrafo #03</p>
+        <article>
+            <p>Paragrafo #04</p>
+        </article>
+        <article>
+            <p>Paragrafo #05</p>
+        </article>
+    </main>
+    <script>
+        // Os paragrafos que estão fora da tag article
+        // 1. adicionar o texto [fora] no inicio do conteudo
+        // 2. adicionem a classe destaque no paragrafo
+
+        // const paragrafos = Array.from(document.querySelectorAll('p'));
+        // const paragrafosEmArticle = Array.from(document.querySelectorAll('article p'));
+        // const paragrafosFora = paragrafos.filter(paragrafo => !paragrafosEmArticle.includes(paragrafo));
+
+        // paragrafosFora.forEach(p => p.textContent = `[fora] ${p.textContent}`)
+
+        document.querySelectorAll(':not(article) > p').forEach(p => {
+            p.classList.add('destaque')
+            p.textContent = `[fora] ${p.textContent}`
+        })
+    </script>
+
+</body>
+
+</html>

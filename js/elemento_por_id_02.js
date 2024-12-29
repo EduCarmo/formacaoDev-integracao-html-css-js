@@ -1,2 +1,2 @@
-const el = document.getElementById('primeiro');
-console.log('el...', el)
+// const el = document.getElementById('primeiro');
+// console.log('el...', el)

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elementos por ID</title>
+    <link rel="stylesheet" href="../css/estilo.css">
+    <link rel="stylesheet" href="../css/menu.css">
+    <script defer src="../js/elemento_por_id_02.js"></script>
+</head>
+
+<body id="exercicio">
+
+    <div id="primeiro" class="primeiro">#primeiro</div>
+    <div id="segundo" class="destaque" destaque="1">#segundo</div>
+    <div id="terceiro" metade>#terceiro</div>
+    <div id="quarto" class="destaque" destaque="2">#quarto</div>
+    <div id="quinto" class="ultimo">#quinto</div>
+
+    <script>
+
+        function selecionarApenasUm(seletor) {
+            const elemento = document.querySelector(seletor);
+            console.log(elemento);
+
+        }
+
+        selecionarApenasUm('#primeiro'); // Selecionar po ID
+        selecionarApenasUm('.destaque'); // Selecionar por Classe
+        selecionarApenasUm('.ultimo'); // Selecionar por Classe
+        selecionarApenasUm('[metade]'); // Selecionar por Classe
+        selecionarApenasUm('[destaque="2"]');; // Selecionar por Classe
+
+    </script>
+
+</body>
+
+</html>

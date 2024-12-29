@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elementos por ID</title>
+    <link rel="stylesheet" href="../css/estilo.css">
+    <link rel="stylesheet" href="../css/menu.css">
+    <script defer src="../js/elemento_por_id_02.js"></script>
+</head>
+
+<body id="exercicio">
+    <main class="coluna">
+        <label for="compras">Compras</label>
+        <ul id="compras" destino="escritorio" data-urgencia="5">
+            <li>Café</li>
+            <li>Água</li>
+            <li>Copo descartável</li>
+        </ul>
+    </main>
+
+    <script>
+        const lista = document.querySelector('main ul[destino="escritorio"]');
+        console.log('destino #1', lista.childNodes)
+        console.log('destino #2', lista.getAttribute('destino'))
+
+        lista.setAttribute('destino', 'casa')
+        lista.setAttribute('status', 'aberto')
+    </script>
+
+</body>
+
+</html>

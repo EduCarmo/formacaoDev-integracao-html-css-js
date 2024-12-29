@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elementos por ID</title>
+    <link rel="stylesheet" href="../css/estilo.css">
+    <link rel="stylesheet" href="../css/menu.css">
+    <script defer src="../js/elemento_por_id_02.js"></script>
+</head>
+
+<body id="exercicio">
+    <main class="coluna">
+        <h1>Pesquisa no Goole</h1>
+        <form name="formGoogle" action="https://www.google.com.br/search" class="coluna">
+            <!-- q=Linux -->
+            <input type="text" name="q" placeholder="Digite o termo para pesquisar">
+            
+            <!-- hl=pt-BR -->
+             <select name="hl">
+                <option value="pt-BR">Português Brasil</option>
+                <option value="en-us">ingês (Eua)</option>
+             </select>
+             <button>Pesquisar</button>
+        </form>
+    </main>
+
+    <script>
+        console.log(document.forms)
+        console.log(document.forms[0])
+        // 
+        const lista = document.getElementsByName('formGoogle')
+        console.log(lista)
+
+        const camposConsulta = document.getElementsByName('q')[0]
+        console.log(camposConsulta)
+        camposConsulta.value = 'Apple Watch Ultra'
+
+        console.log(document.formGoogle)
+        console.log(document.formGoogle.q)
+        console.log(document.formGoogle.hl)
+
+        formGoogle.hl.value = 'en-us'
+
+    </script>
+
+</body>
+
+</html>
