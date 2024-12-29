@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulando Elementos</title>
+    <link rel="stylesheet" href="../css/estilo.css">
+    <link rel="stylesheet" href="../css/menu.css">
+</head>
+
+<body id="exercicio">
+
+    <div>
+        <a esperar href="http://google.com.br">Google</a>
+    </div>
+    <div>
+        <a href="http://yahoo.com.br">yahoo</a>
+    </div>
+
+    <script>
+        function navegarEm5Segundos(event) {
+            event.preventDefault()
+            setTimeout(() => {
+                const link = event.target
+                window.location.href = link.href
+            }, 5000)   
+        }
+
+        const linksParaEsperar = document.querySelectorAll('[esperar]')
+        linksParaEsperar.forEach(link => {
+            link.addEventListener('click', navegarEm5Segundos)
+        })
+    </script>
+</body>
+
+</html>

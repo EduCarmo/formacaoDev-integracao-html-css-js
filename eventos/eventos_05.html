@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulando Elementos</title>
+    <link rel="stylesheet" href="../css/estilo.css">
+    <link rel="stylesheet" href="../css/menu.css">
+</head>
+
+<body id="exercicio">
+
+    <main class="coluna">
+        <h1 style="text-align: center;">Formulário</h1>
+        <form name="formGoogle" action="https://www.google.com.br/search" method="GET" class="coluna">
+            <!-- Campo de busca -->
+            <input type="text" name="q" placeholder="Digite o termo para pesquisar" required>
+
+            <!-- Idioma -->
+            <select name="hl">
+                <option value="pt-BR">Português Brasil</option>
+                <option value="en-us">Inglês (EUA)</option>
+            </select>
+
+            <!-- Botão de submissão -->
+            <button type="submit" web-submit>Pesquisar</button>
+        </form>
+    </main>
+
+    <script>
+        function submeter(e) {
+            e.preventDefault();
+
+            const formulario = e.target.closest('form'); // Seleciona o formulário relacionado ao botão
+            const dadosFormulario = new FormData(formulario);
+
+            // Serializa os dados do formulário em formato de URL
+            const params = new URLSearchParams(dadosFormulario).toString();
+
+            // Redireciona para o Google com os parâmetros
+            window.location.href = `${formulario.action}?${params}`;
+        }
+
+        const botoes = document.querySelectorAll('[web-submit]');
+        botoes.forEach(el => (el.onclick = submeter));
+    </script>
+</body>
+
+</html>
