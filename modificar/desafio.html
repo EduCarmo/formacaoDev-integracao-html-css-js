@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modificar Elementos</title>
+    <link rel="stylesheet" href="../css/estilo.css">
+    <link rel="stylesheet" href="../css/menu.css">
+</head>
+
+<body id="exercicio">
+
+    <table border="1" width="500">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Nota</th>
+                <th>Status de Aprovação</th>
+            </tr>
+        </thead>
+    </table>
+
+    <script>
+        const alunos = [
+            { nome: 'Ana', nota: 8.1 },
+            { nome: 'Bia', nota: 9.3 },
+            { nome: 'Carlos', nota: 7.7 },
+            { nome: 'Pedro', nota: 8.9 },
+            { nome: 'Julia', nota: 8.5 },
+        ]
+
+        const table = document.querySelector('table')
+
+        alunos.forEach(aluno => {
+            const tr = document.createElement('tr')
+            tr.innerHTML = `
+            <td>${aluno.nome}</td>
+            <td>${aluno.nota}</td>
+
+            <td>${aluno.nota >= 7 ? 'Aprovado' : 'Reprovado'}</td
+            `
+            table.appendChild(tr)
+        })
+
+    </script>
+</body>
+
+</html>

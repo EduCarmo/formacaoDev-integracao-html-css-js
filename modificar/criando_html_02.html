@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modificar Elementos</title>
+    <link rel="stylesheet" href="../css/estilo.css">
+    <link rel="stylesheet" href="../css/menu.css">
+</head>
+
+<body id="exercicio">
+
+    <div>
+        <p>Texto Inicial</p>
+    </div>
+
+    <script>
+        const div = document.querySelector('div')
+        div.innerHTML = 'Texto Alterado'
+        // div.outerHTML = '<h1>Novo Texto</h1>'
+
+        div.insertAdjacentHTML('beforebegin', '<p>Antes do inínicio</p>')
+        div.insertAdjacentHTML('afterbegin', '<p>Depois do início</p>')
+        div.insertAdjacentHTML('beforeend', '<p>Antes do fim</p>')
+        div.insertAdjacentHTML('afterend', '<p>Depois do fim</p>')
+    </script>
+</body>
+
+</html>
